@@ -64,7 +64,7 @@ const fetchPageNumbers = (
 
 const Pagination: React.FC<PageLimitProp> = ({
   pageLimit = 10,
-  pageNeighbours = 1,
+  pageNeighbours = 0,
 }) => {
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [pages, setPages] = useState<(string | number)[]>([]);

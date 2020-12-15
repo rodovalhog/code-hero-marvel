@@ -7,7 +7,6 @@ import { Container } from './styles';
 
 const ListHero: React.FC = () => {
   const { listHero } = useHero();
-  console.log('🚀 ~ file: index.tsx ~ line 9 ~ listHero', listHero);
   return (
     <Container>
       <div className="header-card">

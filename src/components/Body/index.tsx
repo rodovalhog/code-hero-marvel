@@ -13,8 +13,8 @@ const Body: React.FC = () => {
         <h3>Nome do personagem</h3>
         <Search />
         <ListHero />
-        <Pagination />
       </div>
+      <Pagination />
     </Container>
   );
 };

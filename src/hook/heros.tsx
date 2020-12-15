@@ -77,7 +77,6 @@ const HerosProvider: React.FC = ({ children }) => {
 
   const requestComicsHero = useCallback(async (characterId: string) => {
     const response = await herosService.getComicsHero(characterId);
-    console.log('lalallala', response.data.results);
     setComicsHero(response.data.results);
   }, []);
 
@@ -94,13 +93,6 @@ const HerosProvider: React.FC = ({ children }) => {
   const searchHeroRequest = useCallback(async (name: string) => {
     const response = await herosService.getSearchHero(name);
     setListHero(response.data.results);
-    const totalPagesSearch = response.data.total;
-
-    if (totalPagesSearch <= 10) {
-      setTotalPages(0);
-    } else {
-      setTotalPages(totalPagesSearch);
-    }
   }, []);
 
   const getHerosRequest = useCallback(async () => {
